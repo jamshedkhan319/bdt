@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Currency Rate</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
+        .live-rate {
+            font-size: 48px;
+            color: #007BFF;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        .rate-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 15px 0;
+            padding: 10px 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .rate-section img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        .rate-section .rate {
+            font-size: 24px;
+            color: #555;
+            font-weight: bold;
+        }
+        h1 {
+            color: #333;
+            margin: 0;
+        }
+        p {
+            font-size: 16px;
+            color: #555;
+            margin: 10px 0;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #777;
+        }
+        footer p {
+            margin: 5px 0;
+        }
+        footer a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Live Riyal To BDT</h1>
+        <p>Saudi Riyal (SAR) to Bangladeshi Taka (BDT):</p>
+        <div class="live-rate" id="rate">Loading...</div>
+        <div class="rate-section">
+            <img src="bank.png" alt="Bank Logo">
+            <span class="rate" id="bank-rate">32.00 BDT</span>
+        </div>
+        <div class="rate-section">
+            <img src="bkash.png" alt="Bkash Logo">
+            <span class="rate" id="bkash-rate">32.00 BDT</span>
+        </div>
+        <div class="rate-section">
+            <img src="nagat.png" alt="Nagad Logo">
+            <span class="rate" id="nagad-rate">32.00 BDT</span>
+        </div>
+    </div>
+    <footer>
+        <p>Grand Name <a href="mailto:developer@example.com">JAMSHED KHAN</a></p>
+        <p>Help: <a href="mailto:help@example.com">Contact Support</a></p>
+        <p>&copy; 2024 All Rights Reserved</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
