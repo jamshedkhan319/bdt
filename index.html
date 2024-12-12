@@ -12,7 +12,7 @@
             background-color: #f4f4f9;
         }
         .container {
-            max-width: 500px;
+            max-width: 600px;
             margin: 50px auto;
             padding: 20px;
             background-color: white;
@@ -26,39 +26,45 @@
             font-weight: bold;
             margin: 20px 0;
         }
-        .rate-section {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: 15px 0;
-            padding: 10px 20px;
-            background: #f9f9f9;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        .input-section {
+            margin: 20px 0;
         }
-        .rate-section img {
+        .input-section input {
+            width: 50%;
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            text-align: center;
+            margin: 0 auto;
+        }
+        .output-section {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .output-box {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            font-size: 18px;
+            font-weight: bold;
+            color: #555;
+        }
+        .output-box img {
             width: 50px;
             height: 50px;
+            margin-right: 15px;
             border-radius: 50%;
-        }
-        .rate-section .rate {
-            font-size: 24px;
-            color: #555;
-            font-weight: bold;
-        }
-        h1 {
-            color: #333;
-            margin: 0;
-        }
-        p {
-            font-size: 16px;
-            color: #555;
-            margin: 10px 0;
         }
         footer {
             margin-top: 20px;
             font-size: 14px;
             color: #777;
+            text-align: center;
         }
         footer p {
             margin: 5px 0;
@@ -71,24 +77,32 @@
 </head>
 <body>
     <div class="container">
-        <h1>Live Riyal To BDT</h1>
+        <h1>Live Currency Rate</h1>
         <p>Saudi Riyal (SAR) to Bangladeshi Taka (BDT):</p>
         <div class="live-rate" id="rate">Loading...</div>
-        <div class="rate-section">
-            <img src="bank.png" alt="Bank Logo">
-            <span class="rate" id="bank-rate">32.00 BDT</span>
+        
+        <div class="input-section">
+            <label for="riyal-input">Enter Riyal Amount:</label>
+            <input type="number" id="riyal-input" value="1" oninput="calculateRates()" />
         </div>
-        <div class="rate-section">
-            <img src="bkash.png" alt="Bkash Logo">
-            <span class="rate" id="bkash-rate">32.00 BDT</span>
-        </div>
-        <div class="rate-section">
-            <img src="nagat.png" alt="Nagad Logo">
-            <span class="rate" id="nagad-rate">32.00 BDT</span>
+
+        <div class="output-section">
+            <div class="output-box" id="bank-result">
+                <img src="bank-logo.png" alt="Bank Logo">
+                <span>Bank: -- BDT</span>
+            </div>
+            <div class="output-box" id="bkash-result">
+                <img src="bkash-logo.png" alt="Bkash Logo">
+                <span>Bkash: -- BDT</span>
+            </div>
+            <div class="output-box" id="nagad-result">
+                <img src="nagad-logo.png" alt="Nagad Logo">
+                <span>Nagad: -- BDT</span>
+            </div>
         </div>
     </div>
     <footer>
-        <p>Grand Name <a href="mailto:developer@example.com">JAMSHED KHAN</a></p>
+        <p>Developed by <a href="mailto:developer@example.com">Your Name</a></p>
         <p>Help: <a href="mailto:help@example.com">Contact Support</a></p>
         <p>&copy; 2024 All Rights Reserved</p>
     </footer>
