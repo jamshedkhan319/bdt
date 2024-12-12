@@ -1,7 +1,7 @@
 // ব্যাংক, বিকাশ এবং নগদের রেট ম্যানুয়ালি সেট করুন
-const bankRate = 32.50; // ব্যাংক রেট
-const bkashRate = 33.00; // বিকাশ রেট
-const nagadRate = 32.80; // নগদ রেট
+const bankRate = 31.70; // ব্যাংক রেট
+const bkashRate = 32.50; // বিকাশ রেট
+const nagadRate = 31.00; // নগদ রেট
 
 // লাইভ রেট আনুন এবং আপডেট করুন
 const fetchRate = async () => {
